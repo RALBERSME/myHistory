@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baskervville+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Abril Fatface", serif;
+  font-weight: 500px;
+  letter-spacing: 2;
+}
+canvas {
+  position: absolute;
+  background: #f6f5f5;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 100%;
+}
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(1000px);
+  color: rgb(23, 2, 77);
+  font-size: 3rem;
+  animation: slideIn 5s 2s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(1000px);
+  }
+  80% {
+    transform: rotate(-360deg) translateX(-250px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(-250px);
+  }
+}
+
+p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 12.5%;
+  transform: translateX(1000px);
+
+  color: rgb(23, 2, 77);
+  text-shadow: 1px 1px 1px rgb(7, 1, 22);
+  font-size: 1.75rem;
+  animation: turnAround 3s 8s ease-in-out forwards;
+}
+
+@keyframes turnAround {
+  0% {
+    transform: translateX(1000px);
+  }
+  80% {
+    transform: rotateX(360deg) translateX(-250px);
+  }
+  100% {
+    transform: rotate(0deg) translateX(-250px);
+  }
+}
+
+button {
+  position: absolute;
+  top: 70%;
+  left: 37%;
+  right: 25%;
+  opacity: 0;
+  font-size: 1.75rem;
+  background: linear-gradient(to bottom, #77e4c8, #ddfaf3);
+  border: 3px solid rgb(7, 1, 22);
+  color: rgb(7, 1, 22);
+  border-radius: 10%;
+  padding: 15px;
+  font-family: "Abril Fatface", serif;
+  animation: getVisible 3s 12s ease-in-out forwards;
+}
+
+@keyframes getVisible {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
