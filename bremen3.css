@@ -154,6 +154,7 @@ a {
 
 #continue {
   color: rgb(235, 194, 91);
+  margin-left: 60%;
 }
 #continue:hover {
   color: rgb(234, 99, 31);
