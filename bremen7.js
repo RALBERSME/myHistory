@@ -11,11 +11,11 @@ window.addEventListener("load", function () {
     constructor(effect, x, y, color) {
       this.effect = effect;
       this.x = Math.random() * this.effect.canvasWidth;
-      this.y = 0;
+      this.y = this.effect.canvasHeight;
       this.color = color;
       this.originX = x;
       this.originY = y;
-      this.size = this.effect.gap;
+      this.size = this.effect.gap / 3;
       this.dx = 0;
       this.dy = 0;
       this.vx = 0;
@@ -54,38 +54,39 @@ window.addEventListener("load", function () {
       this.canvasWidth = canvasWidth;
       this.canvasHeight = canvasHeight;
       this.textX = this.canvasWidth / 2;
-      this.textY = this.canvasHeight / 3;
-      this.fontSize = 300;
+      this.textY = this.canvasHeight / 2;
+      this.fontSize = 250;
       this.lineHeight = this.fontSize * 0.8;
       this.maxTextWidth = this.canvasWidth * 0.8;
-      this.textInput = "S.S.Bremen";
+      this.textInput = `1939`;
       this.verticalOffset = -70;
+
+      // particle text
       this.particles = [];
-      this.gap = 3;
+      this.gap = 4;
       this.mouse = {
-        radius: 20000,
+        radius: 10000,
         x: 0,
         y: 0,
       };
     }
     wrapText(text) {
+      // canvas settings:
       const gradient = this.context.createLinearGradient(
         0,
         0,
         this.canvasWidth,
         this.canvasHeight
       );
-      gradient.addColorStop(0.2, "#4C3BCF");
-      gradient.addColorStop(0.4, "#478CCF");
-      gradient.addColorStop(0.6, "#36C2CE");
-      gradient.addColorStop(0.8, "#77E4C8");
-      gradient.addColorStop(0.9, "#E9FF97");
+      gradient.addColorStop(0.2, "#E9FF97");
+      gradient.addColorStop(0.4, "#219C90");
+      gradient.addColorStop(0.6, "#4535C1");
       this.context.fillStyle = gradient;
       this.context.textAlign = "center";
-      this.context.textBaseline = "middle";
-      this.context.lineWidth = 2;
-      this.context.strokeStyle = "#FFC7ED";
-      this.context.font = this.fontSize + "px Abril Fatface";
+      this.context.textBaseline = "start";
+      this.context.lineWidth = 3;
+      this.context.strokeStyle = gradient;
+      this.context.font = this.fontSize + "px Merriweather Sans";
 
       let linesArray = [];
       let words = text.split(" ");
@@ -140,11 +141,39 @@ window.addEventListener("load", function () {
         }
       }
     }
+    constellations() {
+      const position = this.particles[0].size / 2;
+      for (let a = 0; a < this.particles.length; a++) {
+        for (let b = a; b < this.particles.length; b++) {
+          const dx = this.particles[a].x - this.particles[b].x;
+          const dy = this.particles[a].y - this.particles[b].y;
+          const distance = Math.hypot(dy, dx);
+          const connectDistance = this.gap * 2.1;
+          if (distance < connectDistance) {
+            const opacity = 1 - distance / connectDistance;
+            this.context.beginPath();
+            this.context.moveTo(
+              this.particles[a].x + position,
+              this.particles[a].y + position
+            );
+            this.context.lineTo(
+              this.particles[b].x + position,
+              this.particles[b].y + position
+            );
+            this.context.save();
+            this.context.globalAlpha = opacity;
+            this.context.stroke();
+            this.context.restore();
+          }
+        }
+      }
+    }
     render() {
       this.particles.forEach((particle) => {
         particle.update();
         particle.draw();
       });
+      this.constellations();
     }
     resize(width, height) {
       this.canvasWidth = width;
@@ -172,7 +201,3 @@ window.addEventListener("load", function () {
     effect.wrapText(effect.textInput);
   });
 });
-
-setTimeout(() => {
-  window.location.href = "bremen3.html";
-}, 7000);

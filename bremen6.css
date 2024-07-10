@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baskervville+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", serif;
+  background-color: black;
+  overflow: hidden;
+}
+#cta {
+  position: absolute;
+  top: 2%;
+  left: 52.5%;
+  color: white;
+}
+.split {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+.left {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+}
+#card0 {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+}
+#paris {
+  margin: 5%;
+  margin-top: 25%;
+  width: 100%;
+  height: 90%;
+}
+.middle {
+  margin-left: 17.5%;
+  margin-top: 7.5%;
+  text-align: center;
+}
+h2 {
+  margin-top: 2%;
+  margin-left: -10%;
+}
+.postcard {
+  position: relative;
+  display: flex;
+  margin-top: 5%;
+}
+#card1 {
+  transform: rotate(-10deg);
+}
+#card2 {
+  transform: rotate(10deg);
+}
+#card3 {
+  transform: rotate(-10deg);
+}
+.card {
+  width: 270px;
+  height: 220px;
+  cursor: pointer;
+}
+.movie {
+  position: absolute;
+  transform: rotate(-20deg);
+  padding-top: 60px;
+  padding-left: 25px;
+  width: 200px;
+  height: 180px;
+  cursor: pointer;
+}
+.card2 {
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 400px;
+  height: 300px;
+  transform: rotate(20deg);
+  cursor: pointer;
+}
+#card {
+  transform: rotate(20deg);
+}
+
+.movie2 {
+  position: absolute;
+  transform: rotate(0deg);
+  padding-top: 60px;
+  padding-left: 55px;
+  width: 200px;
+  height: 180px;
+  cursor: pointer;
+}
+.right {
+  margin-top: 20%;
+}
+#continue {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 25%;
+  margin-top: 5%;
+  cursor: pointer;
+}
+#continue:hover {
+  color: wheat;
+}
