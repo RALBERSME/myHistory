@@ -30,6 +30,7 @@ a {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
+  color: #4535c1;
   cursor: pointer;
 }
 a:hover {
@@ -41,4 +42,9 @@ canvas {
   position: absolute;
   top: 25%;
   left: 0;
+}
+.wrapper {
+  background-color: black;
+  height: 100%;
+  width: 100%;
 }
