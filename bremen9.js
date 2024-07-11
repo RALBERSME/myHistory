@@ -1,5 +1,5 @@
 setTimeout(() => {
-  let audio = new Audio("Images/möve.mp3");
+  let audio = new Audio("moeve.mp3");
   audio.play();
 }, 1000);
 setTimeout(() => {
