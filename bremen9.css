@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.container {
+  width: 1000px;
+  height: 100%;
+  background-image: url("Images/sea-250527_1920.jpg");
+}
+
+#left {
+  width: 25%;
+  height: 100%;
+  font-size: 1.5rem;
+  margin-right: 2.5%;
+  /* background-image: url("Images/birds-5027173_640.png"); */
+  background: linear-gradient(to left, rgba(108, 155, 175, 0.5), white);
+}
+#text {
+  text-align: right;
+  width: 35%;
+  transform: translateY(-530px) translateX(175px);
+  word-spacing: 2;
+  animation: moveText 40s 0s linear forwards;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateY(-530px) translateX(175px);
+  }
+  100% {
+    transform: translateY(950px) translateX(175px);
+  }
+}
