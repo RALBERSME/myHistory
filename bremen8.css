@@ -30,7 +30,7 @@ body {
   background-color: wheat;
   border-style: inset;
   box-shadow: none;
-  animation: flashs 3s 0s ease-in-out forwards;
+  animation: flash 3s 0s ease-in-out forwards;
 }
 @keyframes flash {
   0% {
