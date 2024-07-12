@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  font-family: "Merriweather Sans", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  background: url("Images/movie-778057_1280.jpg");
+  margin: auto;
+  z-index: 1;
+}
+
+.split {
+  height: 100%;
+  width: 100%;
+  padding: 5%;
+  color: black;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+.activity {
+  width: 70%;
+  margin: auto;
+  transform: translateY(0);
+  font-size: 1.5rem;
+  animation: moveTextUp 39s 10s linear forwards;
+}
+
+@keyframes moveTextUp {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1500px);
+  }
+}
+.counter {
+  width: 70%;
+  height: 90%;
+  margin-left: 50%;
+  margin-top: 30%;
+  display: flex;
+  text-align: center;
+  font-size: 2.5rem;
+  color: black;
+}
+#wheel {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  top: 70%;
+  left: 80%;
+  /* animation: rotateWheel 31s 0s ease-in-out forwards; */
+}
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1800deg);
+  }
+}
+#number {
+  margin-left: 2.5%;
+}
+#help {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  font-size: 1.25rem;
+}
+#continue {
+  color: red;
+  font-weight: 800;
+  text-decoration: none;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), whitesmoke);
+  padding: 5px 10px;
+  border-radius: 10%;
+}
+
+#continue:hover {
+  color: darkblue;
+}

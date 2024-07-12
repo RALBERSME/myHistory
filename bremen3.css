@@ -85,21 +85,21 @@
   left: 45.5%;
   z-index: 10;
   opacity: 0;
-  animation: smoke2 1.5s 2.5s ease-out infinite;
+  animation: smoke2 1.5s 0s ease-out infinite;
 }
 
 #smoke1 {
-  animation: smoke1 1.5s 2.5s ease-out infinite;
+  animation: smoke1 1.5s 0s ease-out infinite;
 }
 #smoke3 {
-  animation: smoke1 1.5s 3.5s ease-out infinite;
+  animation: smoke1 1.5s 2.5s ease-out infinite;
 }
 #smoke5 {
-  animation: smoke1 1.5s 4.5s ease-out infinite;
+  animation: smoke1 1.5s 3.5s ease-out infinite;
   background-color: rgb(132, 111, 111);
 }
 #smoke6 {
-  animation: smoke1 1.5s 5.5s ease-out infinite;
+  animation: smoke1 1.5s 4.5s ease-out infinite;
   background-color: rgb(181, 149, 149);
 }
 @keyframes smoke1 {
