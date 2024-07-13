@@ -45,6 +45,7 @@ video {
 }
 a {
   background-color: rgba(24, 28, 30, 0.5);
+  text-decoration: none;
   color: rgba(224, 242, 252, 0.5);
   font-size: 1.25rem;
   border-radius: 40%;
