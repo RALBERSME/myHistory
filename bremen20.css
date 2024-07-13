@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  font-family: "Merriweather Sans", sans-serif;
+  overflow: hidden;
+}
+.topImg {
+  width: 100%;
+  height: 100%;
+  background: url("Images/Voyage.png");
+  background-size: 100%;
+  background-position: 40% 50%;
+  background-repeat: no-repeat;
+}
+.container {
+  position: absolute;
+  top: 2.5%;
+  left: 2.5%;
+}
+.orangered {
+  color: rgb(240, 118, 43);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px yellow;
+}
+li {
+  list-style: none;
+  padding: 5px;
+  margin-bottom: 5px;
+  color: wheat;
+  font-size: 1.35rem;
+}
+.link {
+  cursor: pointer;
+}
+/* text */
+.hide {
+  display: none;
+}
+.overlay {
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 2.5%;
+  width: 95%;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.back {
+  position: absolute;
+  width: 290%;
+  top: 0%;
+  left: -1%;
+}
+.close {
+  color: wheat;
+  cursor: pointer;
+}
+.close:hover {
+  color: orangered;
+}
+#reports {
+  width: 120%;
+}
+#reports a {
+  font-size: 1.25rem;
+  display: block;
+  margin-bottom: 2.5%;
+  cursor: pointer;
+}
+#reports a:hover {
+  color: wheat;
+}

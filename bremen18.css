@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.container {
+  font-size: 1.25rem;
+  margin: 0 10%;
+  color: black;
+  justify-content: center;
+  text-align: center;
+}
+img {
+  width: 50%;
+  height: 40%;
+}
+h1 {
+  margin-bottom: 2.5%;
+}
+.sticker {
+  margin-top: 2.5%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 15px;
+}
+#addNote {
+  width: 220px;
+  height: 120px;
+  background-color: rgb(248, 248, 134);
+  color: dodgerblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+}
+#addNote:hover {
+  background-color: dodgerblue;
+  color: white;
+}
+#continue {
+  margin-top: 10px;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+#continue:hover {
+  color: rgb(234, 61, 147);
+}
